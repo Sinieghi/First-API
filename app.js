@@ -33,6 +33,7 @@ app.use(cors());
 app.use(xss());
 
 // extra packages
+app.get("/", "hello");
 
 // routes
 app.use("/api/v1/auth", authRouter); //passo1
