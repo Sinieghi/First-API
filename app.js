@@ -33,7 +33,9 @@ app.use(cors());
 app.use(xss());
 
 // extra packages
-app.get("/", "hello");
+app.get("/", (req, res) => {
+  res.send("API");
+});
 
 // routes
 app.use("/api/v1/auth", authRouter); //passo1
